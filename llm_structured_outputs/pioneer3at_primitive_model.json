@@ -1,0 +1,221 @@
+{
+  "robot_name": "Pioneer 3-AT",
+  "approximate_scale": [
+    0.487,
+    0.489,
+    0.273
+  ],
+  "physics": {
+    "mass": 8.8,
+    "center_of_mass": [
+      0.0,
+      0.0,
+      0.17
+    ],
+    "inertia": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "friction": null,
+    "restitution": null,
+    "damping": null
+  },
+  "parts": [
+    {
+      "name": "chassis",
+      "type": "box",
+      "dimensions": {
+        "size": [
+          0.42,
+          0.33,
+          0.2
+        ]
+      },
+      "mass": 5.6,
+      "position": [
+        0.0,
+        0.0,
+        0.173
+      ],
+      "orientation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material": "Red Plastic",
+      "parent": null,
+      "joint": {
+        "type": "fixed",
+        "axis": null,
+        "limits": null,
+        "stiffness": null,
+        "damping": null
+      }
+    },
+    {
+      "name": "back_left_wheel",
+      "type": "cylinder",
+      "dimensions": {
+        "radius": 0.11,
+        "height": 0.095
+      },
+      "mass": 0.8,
+      "position": [
+        -0.1331,
+        0.197,
+        0.11
+      ],
+      "orientation": [
+        1.5708,
+        0.0,
+        0.0
+      ],
+      "material": "Rubber and Orange Plastic",
+      "parent": "chassis",
+      "joint": {
+        "type": "hinge",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": null,
+        "stiffness": 0.0,
+        "damping": 0.0,
+        "motor": {
+          "type": "velocity",
+          "max_velocity": 6.4,
+          "max_torque": 20.0
+        }
+      }
+    },
+    {
+      "name": "back_right_wheel",
+      "type": "cylinder",
+      "dimensions": {
+        "radius": 0.11,
+        "height": 0.095
+      },
+      "mass": 0.8,
+      "position": [
+        -0.1331,
+        -0.197,
+        0.11
+      ],
+      "orientation": [
+        1.5708,
+        0.0,
+        0.0
+      ],
+      "material": "Rubber and Orange Plastic",
+      "parent": "chassis",
+      "joint": {
+        "type": "hinge",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": null,
+        "stiffness": 0.0,
+        "damping": 0.0,
+        "motor": {
+          "type": "velocity",
+          "max_velocity": 6.4,
+          "max_torque": 20.0
+        }
+      }
+    },
+    {
+      "name": "front_left_wheel",
+      "type": "cylinder",
+      "dimensions": {
+        "radius": 0.11,
+        "height": 0.095
+      },
+      "mass": 0.8,
+      "position": [
+        0.1331,
+        0.197,
+        0.11
+      ],
+      "orientation": [
+        1.5708,
+        0.0,
+        0.0
+      ],
+      "material": "Rubber and Orange Plastic",
+      "parent": "chassis",
+      "joint": {
+        "type": "hinge",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": null,
+        "stiffness": 0.0,
+        "damping": 0.0,
+        "motor": {
+          "type": "velocity",
+          "max_velocity": 6.4,
+          "max_torque": 20.0
+        }
+      }
+    },
+    {
+      "name": "front_right_wheel",
+      "type": "cylinder",
+      "dimensions": {
+        "radius": 0.11,
+        "height": 0.095
+      },
+      "mass": 0.8,
+      "position": [
+        0.1331,
+        -0.197,
+        0.11
+      ],
+      "orientation": [
+        1.5708,
+        0.0,
+        0.0
+      ],
+      "material": "Rubber and Orange Plastic",
+      "parent": "chassis",
+      "joint": {
+        "type": "hinge",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": null,
+        "stiffness": 0.0,
+        "damping": 0.0,
+        "motor": {
+          "type": "velocity",
+          "max_velocity": 6.4,
+          "max_torque": 20.0
+        }
+      }
+    }
+  ],
+  "assembly_instructions": [
+    "The robot is modeled in a coordinate system where X is forward, Y is left, and Z is up. All positions and orientations are relative to the robot's root frame.",
+    "1. Create the main chassis: A box primitive named 'chassis' with dimensions [0.42, 0.33, 0.2] meters. Position it at [0.0, 0.0, 0.173]. This is the root body of the robot.",
+    "2. Attach the back left wheel: Create a cylinder named 'back_left_wheel' with a radius of 0.11m and a height of 0.095m. Connect it to the 'chassis' with a hinge joint.",
+    "   - The joint's anchor point (and the wheel's position) relative to the chassis is [-0.1331, 0.197, 0.11].",
+    "   - The hinge axis is the Y-axis [0, 1, 0].",
+    "   - Orient the cylinder by rotating it 90 degrees around the X-axis ([1.5708, 0, 0] Euler) so its main axis aligns with the hinge axis.",
+    "3. Attach the back right wheel: Repeat step 2 for the 'back_right_wheel', but position it at [-0.1331, -0.197, 0.11].",
+    "4. Attach the front left wheel: Repeat step 2 for the 'front_left_wheel', but position it at [0.1331, 0.197, 0.11].",
+    "5. Attach the front right wheel: Repeat step 2 for the 'front_right_wheel', but position it at [0.1331, -0.197, 0.11].",
+    "6. Assign masses: The chassis has a mass of 5.6 kg. Each of the four wheels has a mass of 0.8 kg, for a total robot mass of 8.8 kg.",
+    "7. Configure motors: Each of the four hinge joints should be equipped with a velocity-controlled motor with a maximum velocity of 6.4 rad/s and a maximum torque of 20.0 Nm."
+  ]
+}

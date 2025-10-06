@@ -1,0 +1,91 @@
+{
+  "robot_name": "Pioneer 3-AT",
+  "overall_dimensions": {
+    "height_mm": 277,
+    "width_mm": 497,
+    "depth_mm": 508
+  },
+  "parts": [
+    {
+      "part_name": "body",
+      "dimensions": {
+        "length_mm": 508,
+        "width_mm": 381,
+        "height_mm": 277,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": "red",
+      "material": "1.6 mm aluminum powder-coated",
+      "notes": "Main chassis; dimensions inferred from diagram, width excluding wheels"
+    },
+    {
+      "part_name": "tires",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": 222
+      },
+      "mass_kg": null,
+      "color": "black",
+      "material": "reinforced pneumatic",
+      "notes": "Four tires; diameter inferred from diagram label on wheel"
+    },
+    {
+      "part_name": "wheels",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": 222
+      },
+      "mass_kg": null,
+      "color": "yellow",
+      "material": null,
+      "notes": "Four wheels with rims; color from photo; diameter matches tires"
+    },
+    {
+      "part_name": "battery",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": "lead acid",
+      "notes": "Supports up to 3 batteries, each 7.2 Ah; hot-swappable via hinged access panel"
+    },
+    {
+      "part_name": "entire robot",
+      "dimensions": {
+        "length_mm": 508,
+        "width_mm": 497,
+        "height_mm": 277,
+        "diameter_mm": null
+      },
+      "mass_kg": 12,
+      "color": null,
+      "material": null,
+      "notes": "Overall weight including one battery"
+    }
+  ],
+  "assembly_instructions_for_CAD_engineer": [
+    "Start by modeling the main body as a rectangular chassis using 1.6 mm thick aluminum sheet, powder-coated red, with overall dimensions approximately 508 mm length, 381 mm width (inner), and 277 mm height; include a flat top platform and sides.",
+    "Add four wheel assemblies: model reinforced pneumatic tires (black, diameter 222 mm) mounted on yellow rims; position two wheels on each side in a skid-steer configuration with wheelbase approximately 268 mm (front to rear) and track width 381 mm (inner), extending to overall width of 497 mm.",
+    "Incorporate front and rear overhangs of approximately 120 mm each based on overall length.",
+    "Include a hinged latched access panel on the body for battery compartment, supporting up to three lead-acid batteries.",
+    "Add mounting points for accessories such as emergency stop switch, wheel encoders, and microcontroller; encoders attach to wheels, microcontroller inside body.",
+    "Model four motors for skid-steer drive, attached internally to drive the wheels directly (no joints, fixed axles).",
+    "Include user control panel on the body with piezo buzzer, indicators, switches, reset, and motor enable button.",
+    "Ensure the model accounts for swing radius of 340 mm and turn radius of 0 cm for skid-steer dynamics.",
+    "Assemble by attaching wheel-motor assemblies to the body sides, then add batteries internally, control panel on top/rear, and any basic accessories like e-stop switch on top.",
+    "Use metric units; replicate geometric features from the diagram on page 2, such as rounded edges if visible, and rugged construction for all-terrain use."
+  ],
+  "sources": [
+    "Page 1: robot weight, body material, tires, batteries, operation specs like swing radius",
+    "Page 2: dimensions diagram with labels 277 mm (height), 508 mm (length), 497 mm (width), 381 mm (body width), 222 mm (wheel diameter), 268 mm (wheelbase), colors from photos on both pages"
+  ]
+}

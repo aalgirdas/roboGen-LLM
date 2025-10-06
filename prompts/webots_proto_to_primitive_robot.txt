@@ -1,6 +1,8 @@
-You are an expert in robotics simulation and Webots/MuJoCo modeling.
-You will receive the contents of a Webots .proto file that defines a robot.
-Your goal is to extract the physical and structural information and produce a simplified version of the robot using only basic geometric primitives (box, cylinder, sphere), supported in most simulators (Webots, MuJoCo, PyBullet, etc.).
+You are an expert in robot simulation and modeling for Webots, MuJoCo, and PyBullet.
+I will provide you with the contents of a Webots proto file (as .txt file) that defines a robot.
+Your task is to analyze the file, extract its physics and geometry information, and produce a simplified version of the robot made only from basic geometric primitives (box, cylinder, sphere).
+
+The goal is to create a model that can be easily reimplemented in other simulators while retaining approximate physical behavior and structure.
 
 Step-by-Step Instructions
 

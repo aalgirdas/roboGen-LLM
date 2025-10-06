@@ -13,14 +13,4 @@ It automatically extracts geometric, mass, and material data from PDFs, and gene
 - 🧱 **CAD Engineer Guidance** — Generates human-readable CAD assembly instructions.
 - 💬 **Prompt Library** — Modular prompts for different tasks: extraction, simulation, CAD generation.
 
----
 
-## 🗂️ Repository Structure
-
-roboGen-LLM/
-├── data/          # Raw PDFs, extracted JSON, images
-├── prompts/       # Prompt templates for different LLM tasks
-├── src/           # Core Python scripts and generators
-├── notebooks/     # Interactive examples and experiments
-├── tests/         # Unit tests for parsing and generation
-└── docs/          # Documentation and design notes

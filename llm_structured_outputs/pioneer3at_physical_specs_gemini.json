@@ -2,89 +2,104 @@
   "robot_name": "Pioneer 3-AT",
   "overall_dimensions": {
     "height_mm": 277,
-    "width_mm": 508,
-    "depth_mm": 497
+    "width_mm": 497,
+    "length_mm": 508
   },
   "parts": [
     {
-      "part_name": "Robot Assembly (Total)",
-      "dimensions": {
-        "length_mm": 497,
-        "width_mm": 508,
-        "height_mm": 277,
-        "diameter_mm": null
-      },
-      "mass_kg": 12,
-      "color": null,
-      "material": null,
-      "notes": "This represents the entire robot base model. It is a four-wheel, four-motor skid-steer platform. The swing radius is 340 mm (34 cm)."
-    },
-    {
       "part_name": "Body/Chassis",
       "dimensions": {
-        "length_mm": null,
-        "width_mm": null,
+        "length_mm": 508,
+        "width_mm": 381,
         "height_mm": null,
-        "diameter_mm": null
+        "diameter_mm": null,
+        "thickness_mm": 1.6,
+        "notes": null
       },
       "mass_kg": null,
-      "color": "Red (powder-coated)",
-      "material": "1.6 mm aluminum",
-      "notes": "The main structural body of the robot, observed from images to be red."
+      "color": "Red and Black/Dark Gray",
+      "material": "1.6 mm aluminum (powder-coated)"
     },
     {
-      "part_name": "Top Plate",
+      "part_name": "Wheels",
       "dimensions": {
         "length_mm": null,
         "width_mm": null,
         "height_mm": null,
-        "diameter_mm": null
+        "diameter_mm": 222,
+        "thickness_mm": null,
+        "notes": "Distance between wheel centers (axle-to-axle) is 268 mm."
       },
       "mass_kg": null,
-      "color": "Grey / Silver",
-      "material": "Aluminum (assumed)",
-      "notes": "Visible in the main photo, featuring an emergency stop switch and other controls."
-    },
-    {
-      "part_name": "Wheel",
-      "dimensions": {
-        "length_mm": null,
-        "width_mm": null,
-        "height_mm": null,
-        "diameter_mm": 222
-      },
-      "mass_kg": null,
-      "color": "Black tire with silver/grey hub",
-      "material": "Reenforced Pneumatic",
-      "notes": "The robot has four identical wheels. The center-to-center distance is 268 mm (width) and 381 mm (length)."
-    },
-    {
-      "part_name": "Battery",
-      "dimensions": {
-        "length_mm": null,
-        "width_mm": null,
-        "height_mm": null,
-        "diameter_mm": null
-      },
-      "mass_kg": null,
-      "color": null,
-      "material": null,
-      "notes": "Chemistry: lead acid. Capacity: 7.2 Ah each. The robot supports up to 3 batteries at a time and they are hot-swappable."
+      "color": "Black",
+      "material": "Reenforced Pneumatic"
     }
   ],
+  "performance_specifications": {
+    "robot_weight_kg": 12,
+    "operating_payload": {
+      "tile_floor_kg": 12,
+      "grass_dirt_kg": 10,
+      "asphalt_kg": 5
+    },
+    "drive_type": "4-wheel, 4-motor skid-steer",
+    "turn_radius_cm": 0,
+    "swing_radius_cm": 34,
+    "max_speed_mps": 0.7,
+    "rotation_speed_dps": 140,
+    "max_traversable_step_cm": 10,
+    "max_traversable_gap_cm": 15,
+    "max_traversable_grade_percent": 35,
+    "traversable_terrain": [
+      "Asphalt",
+      "flooring",
+      "sand",
+      "dirt"
+    ]
+  },
+  "power_and_electronics": {
+    "batteries": {
+      "quantity_supported": 3,
+      "chemistry": "lead acid",
+      "capacity_Ah_each": 7.2,
+      "hot_swappable": true,
+      "run_time_hours": "2-4 (with 3 batteries, no accessories)",
+      "charge_time_hours": {
+        "standard": 12,
+        "high_capacity_optional": 2.4
+      }
+    },
+    "available_power_supplies": [
+      {
+        "voltage_V": 5,
+        "current_A": 1.5,
+        "type": "switched"
+      },
+      {
+        "voltage_V": 12,
+        "current_A": 2.5,
+        "type": "switched"
+      }
+    ],
+    "microcontroller_io": {
+      "system_serial_ports": 1,
+      "digital_inputs": 32,
+      "digital_outputs": 8,
+      "analog_inputs": 7,
+      "serial_expansion_ports": 3
+    }
+  },
   "assembly_instructions_for_CAD_engineer": [
-    "Begin by creating the main body/chassis component. It is fabricated from 1.6 mm powder-coated aluminum. The overall footprint is approximately 497 mm (depth) by 508 mm (width). The overall height of the assembly is 277 mm. Model the body in a red color.",
-    "Model a separate top plate, colored grey/silver, to fit onto the main body. Include cutouts for an emergency stop switch and other user controls as seen in the image on page 1.",
-    "Establish the mounting points for the four wheels based on the diagram on page 2. The wheel axles are spaced 268 mm apart across the width and 381 mm apart along the length of the robot, centered on the chassis.",
-    "Model a single wheel assembly with a total diameter of 222 mm. The tire is a black reinforced pneumatic type, and the hub is silver/grey.",
-    "Create an assembly and place the main chassis. Mate four instances of the wheel assembly to the previously defined axle mounting points.",
-    "Design an internal compartment to house up to three lead-acid batteries. The design must include a hinged, latched access panel to allow for hot-swapping, as specified in the documentation.",
-    "The final model is a skid-steer platform, meaning there are no steering joints for the wheels. The robot is driven by four independent motors, one for each wheel.",
-    "Set the mass properties of the final assembly to a total of 12 kg."
+    "1. Create the main robot chassis based on the overall dimensions (508mm L x 381mm W). The material is 1.6mm thick powder-coated aluminum. The main body appears to be red.",
+    "2. Model four pneumatic wheels with a diameter of 222mm.",
+    "3. Position the wheel axles. The centers of the front and rear wheels are 268mm apart. The total width across the wheels is 497mm.",
+    "4. Add the top plate, which is dark gray/black and includes cutouts and mounting points for sensors and the emergency stop switch.",
+    "5. The overall height of the assembly is 277mm from the ground to the top of the chassis.",
+    "6. Internally, model space for up to three 7.2 Ah lead-acid batteries and the microcontroller."
   ],
   "sources": [
-    "Page 1, Specifications Section (Construction, Operation, Power, Batteries)",
-    "Page 2, Dimensions (mm) diagram",
-    "General appearance and colors from images on Page 1 and Page 2"
+    "Page 1: Specifications Table (Construction, Operation, Skid Steering Drive, Power, Batteries, Microcontroller I/O)",
+    "Page 1: Main product image (for colors)",
+    "Page 2: Dimensions (mm) diagram (for all dimensional data)"
   ]
 }

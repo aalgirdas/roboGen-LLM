@@ -1,0 +1,96 @@
+{
+  "robot_name": "Pioneer 3-AT",
+  "overall_dimensions": {
+    "height_mm": 277,
+    "width_mm": 381,
+    "depth_mm": 508
+  },
+  "parts": [
+    {
+      "part_name": "Body Chassis",
+      "dimensions": {
+        "length_mm": 508,
+        "width_mm": 381,
+        "height_mm": 277,
+        "diameter_mm": null
+      },
+      "mass_kg": 12,
+      "color": "powder-coated aluminum (likely silver or gray finish)",
+      "material": "1.6 mm aluminum (powder-coated)",
+      "notes": "Main body houses electronics, batteries, and control systems; includes hinged latched access panel for hot-swappable batteries."
+    },
+    {
+      "part_name": "Wheel Assembly (x4)",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": 222
+      },
+      "mass_kg": null,
+      "color": "black (reinforced pneumatic tires)",
+      "material": "rubber with metal hub (reinforced pneumatic)",
+      "notes": "Four independently driven wheels; used for skid steering; low-friction tires optional for indoor use."
+    },
+    {
+      "part_name": "Battery Pack",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": "black or dark gray (typical battery casing)",
+      "material": "lead-acid",
+      "notes": "Up to 3 hot-swappable 7.2 Ah lead-acid batteries; accessible through hinged latched panel."
+    },
+    {
+      "part_name": "Control Panel",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": "black faceplate with labeled switches",
+      "material": "metal or composite",
+      "notes": "Contains power indicator, battery charge indicator, AUX power switches, reset, and motor enable pushbutton."
+    },
+    {
+      "part_name": "Microcontroller Board",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": "PCB (electronic circuit board)",
+      "notes": "Includes ARCOS firmware, 32 digital inputs, 8 digital outputs, 7 analog inputs, 3 serial expansion ports; part of Pioneer SDK system."
+    }
+  ],
+  "assembly_instructions_for_CAD_engineer": [
+    "1. Model the main chassis as a rectangular aluminum shell (1.6 mm wall thickness) with overall dimensions of 508 mm (length) x 381 mm (width) x 277 mm (height).",
+    "2. Include internal compartments for battery housing (accessible through a hinged, latched panel on one side).",
+    "3. Design four wheel assemblies with reinforced pneumatic tires (diameter ~222 mm). Position them symmetrically on both sides of the chassis for skid-steer operation.",
+    "4. Add four DC motors, one per wheel, directly coupled to the wheel hubs to enable independent drive control.",
+    "5. Integrate the control panel on the top or front surface — include labeled cutouts for power indicator, battery indicators, AUX switches, reset button, and motor enable pushbutton.",
+    "6. Mount the internal microcontroller board (ARCOS system) centrally within the chassis. Include access points for power and communication ports (serial, USB, etc.).",
+    "7. Add space and mounting points for optional accessories such as sonar arrays, laser range finders, cameras, GPS, and robotic arm modules.",
+    "8. Apply powder-coated aluminum finish to the exterior; tires in black rubber, hub mounts in metallic gray.",
+    "9. Assemble components ensuring easy disassembly for hot-swappable battery access and maintenance."
+  ],
+  "sources": [
+    "Specifications section (Construction, Operation, Skid Steering Drive, Power, Batteries, Microcontroller I/O, User Control Panel)",
+    "Dimensions table (values: 508 mm, 381 mm, 277 mm, 222 mm)",
+    "Product Features and Benefits section",
+    "Accessory and software support sections"
+  ]
+}
+
+
+
+

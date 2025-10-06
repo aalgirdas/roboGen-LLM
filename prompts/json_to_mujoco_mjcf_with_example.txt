@@ -1,0 +1,56 @@
+You are an expert in physics-based robot simulation and MuJoCo model creation.
+You will receive two attached input files:
+
+A JSON file containing a simplified robot description composed only of geometric primitives (box, cylinder, sphere).
+
+A working MuJoCo XML (MJCF) file that serves as an example of a correctly structured and functional model.
+
+Your task is to generate a new MuJoCo MJCF XML file that represents the robot defined in the JSON file while following the modeling style, structure, and conventions used in the example XML.
+
+Requirements
+
+Follow the example XML’s style
+  Maintain the same organization, indentation, attribute order, and section structure.
+  If the example XML includes sections such as <compiler>, <option>, <default>, <size>, <visual>, <worldbody>, or <actuator>, follow their layout and conventions.
+  Use the same approach for materials, colors, or defaults if they exist in the example.
+
+Use only geometric primitives
+  Use only box, cylinder, and sphere in <geom type="...">.
+  Do not use mesh or external geometry files.
+
+Translate JSON parts
+  Each "part" in the JSON becomes a <body> in MuJoCo.
+  Add a <geom> for the shape.
+  Add a <joint> only if "joint.type" ≠ "fixed".
+  Use "position" for pos and "orientation" for euler (in radians).
+  Use the "parent" field to build the body hierarchy.
+
+Include physical properties
+  Include "mass", "friction", "damping", "inertia", if available.
+  If a "motor" field exists, add a corresponding <motor> element in <actuator>:
+  Use "joint" as the target, "max_velocity" as control range, and "max_torque" as the torque scale or gear.
+
+Geometry dimensions
+  For box: <geom type="box" size="x/2 y/2 z/2"/> (MuJoCo uses half extents).
+  For cylinder: <geom type="cylinder" size="radius height/2"/>.
+  For sphere: <geom type="sphere" size="radius"/>.
+
+Units
+  Lengths in meters, mass in kilograms, angles in radians.
+
+Output
+  Produce only the complete and valid MuJoCo MJCF XML file as output.
+
+
+
+Input Files
+  You will receive the following attached input files:
+  example model in xml → A working MuJoCo MJCF file that demonstrates correct modeling style and structure.
+  robot description in json → A simplified robot description that you must convert to MJCF.
+
+Expected Output
+  A single valid MuJoCo MJCF XML file that:
+    Represents the robot described in robot_description.json, and
+    Follows the modeling conventions and formatting of example model xml .
+
+

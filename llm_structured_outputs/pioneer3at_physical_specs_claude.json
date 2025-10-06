@@ -1,0 +1,141 @@
+{
+  "robot_name": "Pioneer 3-AT (P3AT)",
+  "overall_dimensions": {
+    "height_mm": 277,
+    "width_mm": 497,
+    "depth_mm": 508
+  },
+  "parts": [
+    {
+      "part_name": "Body/Chassis",
+      "dimensions": {
+        "length_mm": 508,
+        "width_mm": 497,
+        "height_mm": 277,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": "powder-coated finish (specific color not specified)",
+      "material": "1.6 mm aluminum (powder-coated)",
+      "notes": "Main body structure with hinged latched access panel for battery access. Skid-steer configuration."
+    },
+    {
+      "part_name": "Complete Robot Assembly",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": 12,
+      "color": null,
+      "material": null,
+      "notes": "Total robot weight without accessories or payload"
+    },
+    {
+      "part_name": "Tires/Wheels (set of 4)",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": "Reinforced Pneumatic",
+      "notes": "Four-wheel configuration with four independent motors. Low friction tires available as alternative for carpet/indoor use. Swing radius: 34 cm (340 mm)"
+    },
+    {
+      "part_name": "Battery (individual)",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": "Lead acid chemistry",
+      "notes": "Capacity: 7.2 Ah each. Supports up to 3 batteries simultaneously. Hot-swappable via hinged access panel. One battery included as standard."
+    },
+    {
+      "part_name": "Microcontroller System",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": null,
+      "notes": "Includes ARCOS firmware with I/O capabilities: 32 digital inputs, 8 digital outputs, 7 analog inputs, 3 serial expansion ports"
+    },
+    {
+      "part_name": "Wheel Encoders (set of 4)",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": null,
+      "notes": "Included as standard equipment for each wheel"
+    },
+    {
+      "part_name": "Emergency Stop Switch",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": null,
+      "notes": "Included as standard safety feature"
+    },
+    {
+      "part_name": "User Control Panel",
+      "dimensions": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "diameter_mm": null
+      },
+      "mass_kg": null,
+      "color": null,
+      "material": null,
+      "notes": "Includes: MIDI programmable piezo buzzer, main power indicator, battery charge indicator, 2 AUX power switches, system reset, motor enable pushbutton"
+    }
+  ],
+  "assembly_instructions_for_CAD_engineer": [
+    "1. BASE CHASSIS: Create a rectangular aluminum chassis measuring 508mm (L) × 497mm (W) × 277mm (H) using 1.6mm thick aluminum sheet. Apply powder-coating finish. The chassis should be designed as a hollow box structure to house internal components.",
+    "2. BATTERY COMPARTMENT: Design a hinged latched access panel on the chassis to accommodate up to 3 lead-acid batteries (7.2 Ah each). The panel must allow hot-swapping capability. Position for easy access while maintaining structural integrity.",
+    "3. WHEEL AND MOTOR ASSEMBLY: Position four independent drive motors in a four-corner configuration for skid-steer operation. The wheelbase and track width should be calculated to achieve a swing radius of 340mm (34cm). Mount reinforced pneumatic tires on each wheel hub.",
+    "4. DRIVE SYSTEM: Implement skid-steering mechanism with four-motor drive (one per wheel). Design for 0cm turn radius capability (turn in place). System must support maximum forward/backward speed of 0.7 m/s and rotation speed of 140°/s.",
+    "5. WHEEL ENCODERS: Install rotary encoders on each of the four wheel assemblies for odometry and motion feedback. Integrate encoder wiring to microcontroller system.",
+    "6. GROUND CLEARANCE: Design chassis height to provide capability for: 10cm maximum traversable step height, 15cm maximum traversable gap, and 35% maximum grade.",
+    "7. MICROCONTROLLER MOUNTING: Install microcontroller board with ARCOS firmware internally. Ensure access to: 32 digital inputs, 8 digital outputs, 7 analog inputs, and 3 serial expansion ports. Route connections appropriately.",
+    "8. POWER DISTRIBUTION: Integrate power management system supporting: 5V @ 1.5A switched supply, 12V @ 2.5A switched supply. Install direct plug-in charging port accessible from exterior.",
+    "9. CONTROL PANEL: Mount user control panel on accessible exterior surface including: MIDI programmable piezo buzzer, main power indicator LED, battery charge indicator, 2 AUX power switches, system reset button, and motor enable pushbutton.",
+    "10. EMERGENCY STOP: Install emergency stop switch in prominent, easily accessible location on the chassis exterior for immediate motor cutoff capability.",
+    "11. ACCESSORY MOUNTING PROVISIONS: Design mounting points and structural support for optional accessories including: laser range finders, cameras, SONAR arrays, robotic arms, gyroscope, bumper arrays, and GPS units. Ensure compatibility with PC/104+ slots.",
+    "12. CABLE MANAGEMENT: Create internal cable routing channels to organize power, signal, and data connections between batteries, motors, encoders, microcontroller, and external ports.",
+    "13. WEIGHT DISTRIBUTION: Balance component placement to achieve 12kg total robot weight while maintaining stability. Design for payload capacity of 12kg on tile/floor, 10kg on grass/dirt, and 5kg on asphalt.",
+    "14. PROTECTIVE FEATURES: Ensure construction is rugged and durable with consideration for: minor bumping, jarring, small gaps, and multi-terrain operation (asphalt, flooring, sand, dirt).",
+    "15. FINAL ASSEMBLY: Integrate all subsystems, verify all connections, and ensure hinged panels operate smoothly for battery access. Test skid-steer functionality and verify turn radius performance."
+  ],
+  "sources": [
+    "Main specifications section - dimensions diagram showing 268, 222, 508, 381, 497, 688, 277 measurements in mm",
+    "Construction section - body material and tire specifications",
+    "Operation section - robot weight and payload capacities",
+    "Skid Steering Drive section - performance specifications",
+    "Power section - battery and charging specifications",
+    "Microcontroller I/O section - electronic system specifications",
+    "User Control Panel section - interface components",
+    "Product description - standard included components (battery, emergency stop, wheel encoders, microcontroller)"
+  ]
+}

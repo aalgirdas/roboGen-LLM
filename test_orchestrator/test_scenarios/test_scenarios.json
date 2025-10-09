@@ -1,0 +1,40 @@
+{
+  "suite_name": "Pole_Balancing_Stability_V1",
+  "global_settings": {
+    "TIME_STEP": 32,
+    "failure_pole_angle_rad": 1.4  ,
+    "failure_cart_position_m": 5.0
+  },
+  "scenarios": [
+    {
+      "duration_s": 5.0,
+      "name": "Step_Response",
+      "initial_angle": 0.001
+    },
+    {
+      "duration_s": 5.0,
+      "name": "Step_Response_2",
+      "type": "step_response",
+      "description": "Run 1",
+      "initial_angle": 1.0,
+      "wheel_velocity": 1.0
+    },
+    {
+      "duration_s": 5.0,
+      "name": "Step_Response_3",
+      "type": "step_response",
+      "description": "Run -10",
+      "initial_angle": 1.0,
+      "wheel_velocity": -10.0
+    },
+    {
+      "duration_s": 1.0,
+      "name": "Step_Response_3",
+      "type": "step_response",
+      "description": "Stop",
+      "initial_angle": 1.0,
+      "wheel_velocity": 0.0
+    }
+
+  ]
+}

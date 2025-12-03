@@ -3,6 +3,7 @@
 **roboGen-LLM** is an experimental framework for **LLM-driven generation of robot models** from technical documentation.  
 It automatically extracts geometric, mass, and material data from PDFs, and generates models for simulators like **Webots**, **MuJoCo**, and **URDF/RDF** formats.
 
+
 ---
 
 ## 🚀 Features
@@ -13,4 +14,4 @@ It automatically extracts geometric, mass, and material data from PDFs, and gene
 - 🧱 **CAD Engineer Guidance** — Generates human-readable CAD assembly instructions.
 - 💬 **Prompt Library** — Modular prompts for different tasks: extraction, simulation, CAD generation.
 
-
+---
